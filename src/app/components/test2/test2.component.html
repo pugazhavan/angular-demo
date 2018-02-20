@@ -1,0 +1,13 @@
+<p *ngIf="receivedContent === '' ">
+  Waiting for content...
+</p>
+<p *ngIf="receivedContent !== '' ">
+  Received Data - {{ receivedContent }}
+</p>
+
+<p *ngIf="receivedContent; else waiting">
+  Received Data - {{ receivedContent }}
+</p>
+<ng-template #waiting>
+  Waiting for content...
+</ng-template>
